@@ -1,0 +1,29 @@
+{% extends "_layout.html" %}
+
+{% block title %}_USR NAME--{% endblock title %}
+
+{% block content %}
+<section>
+    <h1>enter your username _</h1>
+    <form method="POST">
+        <div>
+            <input type="text" name="name" id="name" placeholder="usr name">
+        </div>
+        <div>
+            <button class="cybr-btn submit-btn">
+                SUBMIT _
+                <span aria-hidden class="cybr-btn__glitch">snd data __</span>
+                <span aria-hidden class="cybr-btn__tag">S</span>
+            </button>
+        </div>
+    </form>
+
+    <div>
+        {% if session["username"] %}
+        <p>_welcome, <span class="special-text">{{ session["username"] }}</span></p>
+        {% else %}
+        {# do nothing lol #}
+        {% endif %}
+    </div>
+</section>
+{% endblock content %}

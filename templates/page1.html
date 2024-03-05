@@ -1,0 +1,11 @@
+{% extends "_layout.html" %}
+
+{% block title %}_VISTR CNT--{% endblock title %}
+
+{% block content %}
+<section>
+    <h1>visit count</h1>
+    <p>_number of times visited : <span class="special-text">{{ session["visitCount"] }}</span></p>
+</section>
+
+{% endblock content %}

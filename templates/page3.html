@@ -1,0 +1,33 @@
+{% extends "_layout.html" %}
+
+{% block title %} Cool example page {% endblock title %}
+
+{% block content %}
+<section>
+    <h1>welcome to night_city</h1>
+    <div>
+        <p>wake the ____ up samurai, we've got a city to burn</p>
+        <div>
+            <img src="static/images/night-city.png" alt="night city">
+        </div>
+    </div>
+
+
+</section>
+<section class="sec-even">
+    <h1>sec_2</h1>
+    <button class="cybr-btn">
+        PAGE_{{i}}
+        <span aria-hidden class="cybr-btn__glitch">PAGE_{{i}}</span>
+        <span aria-hidden class="cybr-btn__tag">PG{{i}}</span>
+    </button>
+</section>
+<section>
+    <h1>sec_3</h1>
+    <button class="cybr-btn">
+        PAGE_{{i}}
+        <span aria-hidden class="cybr-btn__glitch">PAGE_{{i}}</span>
+        <span aria-hidden class="cybr-btn__tag">PG{{i}}</span>
+    </button>
+</section>
+{% endblock content %}

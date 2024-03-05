@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Default Title{% endblock title %}</title>
+    <link rel="stylesheet" href="/static/buttons.css">
+    <link rel="stylesheet" href="/static/coolStyle.css">
+    <script src="/static/script.js" defer></script>
+</head>
+
+<body>
+    <nav>
+        <div id="nav-content">
+            {% for i in range(7) %}
+            {% if i == 0 %}
+            <a href="/">
+                <button class="cybr-btn">
+                    PAGE_{{i}}
+                    <span aria-hidden class="cybr-btn__glitch">PAGE_{{i}}</span>
+                    <span aria-hidden class="cybr-btn__tag">PG{{i}}</span>
+                </button>
+            </a>
+            {% else %}
+            <a href="{{ '/page%s'%i }}">
+                <button class="cybr-btn">
+                    PAGE_{{i}}
+                    <span aria-hidden class="cybr-btn__glitch">PAGE_{{i}}</span>
+                    <span aria-hidden class="cybr-btn__tag">PG{{i}}</span>
+                </button>
+            </a>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </nav>
+    <div id="rotate-div">
+        <div id="rotate-content">
+            <button id="nav-toggle" class="cybr-btn" onclick="navToggle()">
+                MENU_
+                <span aria-hidden class="cybr-btn__glitch">MENU_</span>
+                <span aria-hidden class="cybr-btn__tag">V1.0</span>
+            </button>
+
+            <hr>
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </div>
+</body>
+
+</html>
