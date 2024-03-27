@@ -129,3 +129,7 @@ input:focus {
     margin-top: 20px;
     width: 175px !important;
 }
+
+.img-div>img {
+    width: 40vw;
+}
