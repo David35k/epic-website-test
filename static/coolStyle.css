@@ -25,7 +25,7 @@ body {
 #nav-toggle {
     font-size: 55px;
     padding: 5px 25px 5px 25px;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 nav {
@@ -77,11 +77,11 @@ nav.appear:hover {
     transform: rotateY(30deg) rotateX(-10deg) translateX(300px) translate3d(0px, 0px, 100px) scale(1.05);
 }
 
-hr {
+/* hr {
     margin-top: 25px;
     color: #E33731;
     box-shadow: 0px 0px 20px 20px rgba(227, 55, 49, 0.25);
-}
+} */
 
 section {
     color: #21B7C6;
@@ -130,6 +130,27 @@ input:focus {
     width: 175px !important;
 }
 
-.img-div>img {
+.sec1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sec1-div1 {
+    display: flex;
+}
+
+.sec1-div1>* {
+    margin: 20px;
+}
+
+.sec1-div1>img {
     width: 40vw;
+    border: 1.5px #FDE907 solid;
+    box-shadow: 0px 0px 10px 10px #e33731a4;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.sec1-div1>img:hover {
+    box-shadow: 0px 0px 5px 5px #e33731a4;
 }

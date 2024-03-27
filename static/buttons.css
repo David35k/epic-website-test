@@ -113,7 +113,7 @@
     left: calc(var(--border) * 1);
     clip-path: var(--clip);
     background: var(--primary);
-    z-index: 10;
+    z-index: -1;
 }
 
 @keyframes glitch {
