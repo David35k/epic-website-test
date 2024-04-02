@@ -34,14 +34,16 @@
             {% endfor %}
         </div>
     </nav>
+    <div id="nav2">
+        <button id="nav-toggle" class="cybr-btn" onclick="navToggle()">
+            MENU_
+            <span aria-hidden class="cybr-btn__glitch">MENU_</span>
+            <span aria-hidden class="cybr-btn__tag">V1.0</span>
+        </button>
+    </div>
+
     <div id="rotate-div">
         <div id="rotate-content">
-            <button id="nav-toggle" class="cybr-btn" onclick="navToggle()">
-                MENU_
-                <span aria-hidden class="cybr-btn__glitch">MENU_</span>
-                <span aria-hidden class="cybr-btn__tag">V1.0</span>
-            </button>
-
             <!-- <hr> -->
             {% block content %}
             {% endblock content %}

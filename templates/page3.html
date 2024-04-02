@@ -1,6 +1,6 @@
 {% extends "_layout.html" %}
 
-{% block title %} Cool example page {% endblock title %}
+{% block title %} welcome_to_night_city {% endblock title %}
 
 {% block content %}
 <section class="sec1">
@@ -8,7 +8,8 @@
     <p>wake up samurai, we've got a city to <span class="special-text">burn</span></p>
 
     <div class="sec1-div1">
-        <img src="static/images/night-city.png" alt="night city">
+        <img src="static/images/night-city.png" alt="night city" id="night-city-img" onmousemove="cool3dthing(event)"
+            onmouseleave="stopcool3dthing()">
         <p>Night City, the bustling metropolis at the heart of Cyberpunk 2077, pulsates with energy and danger. Neon
             lights flicker against the darkened sky, casting an eerie glow over the labyrinth of streets below.
             Skyscrapers tower overhead, their reflective surfaces mirroring the chaotic streets teeming with a
