@@ -11,6 +11,7 @@
 body {
     background-image: linear-gradient(175deg, rgb(44, 8, 12), rgb(0, 2, 5));
     overflow-x: hidden;
+    margin: 0;
 }
 
 ::selection {
@@ -24,6 +25,7 @@ body {
 
 nav {
     position: fixed;
+    margin-top: 20px;
     transform: translateX(-150%);
     transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
     width: fit-content;
@@ -46,29 +48,25 @@ nav {
 }
 
 nav.appear {
-    transform: translateX(10%) rotateY(-25deg) rotateX(-15deg);
+    transform: translateX(10%) rotateY(-25deg) rotateX(-15deg) translateY(50px);
 }
 
 nav.appear:hover {
     transform: translateX(10%) translate3d(0px, 0px, 100px) rotateY(-15deg) rotateX(-10deg) scale(1.05);
 }
 
-#rotate-content {
-    /* margin: 50px; */
-}
-
 #rotate-div {
-    transition: 2s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1);
     perspective: 100px;
     height: fit-content;
 }
 
 #rotate-div.rotate {
-    transform: rotateY(40deg) rotateX(-25deg) translateX(300px);
+    transform: rotateY(30deg) rotateX(-15deg) translateX(300px) translateY(100px);
 }
 
 #rotate-div.rotate:hover {
-    transform: rotateY(30deg) rotateX(-10deg) translateX(300px) translate3d(0px, 0px, 100px) scale(1.05);
+    transform: rotateY(25deg) rotateX(-10deg) translateX(300px) translate3d(0px, 0px, 100px) scale(1.05);
 }
 
 section {
@@ -77,8 +75,7 @@ section {
     box-shadow: 5px 5px #21B7C6, 0px 0px 20px 20px rgba(227, 55, 49, 0.25);
     height: fit-content;
     margin-bottom: 15px;
-    padding: 10px;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
     background-image: linear-gradient(175deg, rgb(44, 8, 12), rgb(0, 2, 5));
 }
 
@@ -127,6 +124,7 @@ input:focus {
 
 .sec1-div1 {
     display: flex;
+    margin-bottom: 75px;
 }
 
 .sec1-div1>* {
@@ -145,12 +143,18 @@ input:focus {
 }
 
 #nav2 {
-    width: 100vw;
+    width: 99.9vw;
     position: sticky;
     top: 0;
     z-index: 10;
-    /* background-color: #21B7C6; */
-    /* visibility: hidden; */
+    background-image: linear-gradient(175deg, rgb(44, 8, 12), rgb(0, 2, 5));
+    border: #E33731 1.5px solid;
+    transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0px 0px 20px 20px rgba(227, 55, 49, 0.25)
+}
+
+#nav2.go-away {
+    transform: translateX(425px) translateY(50px) rotateY(30deg) rotateX(-10deg);
 }
 
 #nav-toggle {

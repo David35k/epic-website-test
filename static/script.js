@@ -1,8 +1,16 @@
-// this is for the navbar
+// css helper function to change styles
+function css(element, style) {
+    for (const property in style)
+        element.style[property] = style[property];
+}
+
+// ---------- this is for the navbar ----------
 
 // get html elements
 let rotateDiv = document.getElementById("rotate-div")
 let navbar = document.querySelector("nav");
+// get the navbar thats at the top of the page
+let navbar2 = document.querySelector("#nav2")
 
 let navToggleBool = 0;
 
@@ -11,11 +19,13 @@ function navToggle() {
         console.log("disappear navbar!!!");
         rotateDiv.removeEventListener("click", navToggle);
         navbar.classList.remove("appear");
+        navbar2.classList.remove("go-away");
         rotateDiv.classList.remove("rotate");
         navToggleBool = 0;
     } else {
         console.log("appear!!!!");
         navbar.classList.add("appear");
+        navbar2.classList.add("go-away");
         rotateDiv.classList.add("rotate");
         navToggleBool = 1;
 
@@ -26,16 +36,10 @@ function navToggle() {
     }
 }
 
-// for cool image thing
+// ---------- for cool image thing ----------
 
 // get the image
 let image = document.querySelector("#night-city-img");
-
-// css helper function to change styles
-function css(element, style) {
-    for (const property in style)
-        element.style[property] = style[property];
-}
 
 function cool3dthing(event) {
     // get cursor pos
