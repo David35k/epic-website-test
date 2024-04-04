@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin" />
     <title>{% block title %}Default Title{% endblock title %}</title>
     <link rel="stylesheet" href="/static/buttons.css">
     <link rel="stylesheet" href="/static/coolStyle.css">
@@ -13,7 +14,7 @@
 <body>
     <nav>
         <div id="nav-content">
-            {% for i in range(7) %}
+            {% for i in range(5) %}
             {% if i == 0 %}
             <a href="/">
                 <button class="cybr-btn">
@@ -40,6 +41,15 @@
             <span aria-hidden class="cybr-btn__glitch">MENU_</span>
             <span aria-hidden class="cybr-btn__tag">V1.0</span>
         </button>
+        {% if not session["username"] %}
+        <button id="nav-toggle" class="cybr-btn" onclick="navToggle()">
+            LOG_IN
+            <span aria-hidden class="cybr-btn__glitch">ERR_03</span>
+            <span aria-hidden class="cybr-btn__tag">V2.1</span>
+        </button>
+        {% else %}
+        {% endif %}
+
     </div>
 
     <div id="rotate-div">

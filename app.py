@@ -22,7 +22,7 @@ def page1():
 @app.route("/page2", methods=["POST", "GET"])
 def page2():
     if request.method == "POST":
-        session["username"] = request.form["name"]
+        session["sillyName"] = request.form["name"]
 
     return render_template("page2.html")
 
@@ -31,6 +31,11 @@ def page2():
 def page3():
 
     return render_template("page3.html")
+
+@app.route("/page4")
+def page4():
+
+    return render_template("page4.html")
 
 
 app.run(debug=True)
